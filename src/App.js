@@ -1,5 +1,4 @@
 import React from 'react';
-import {ReactComponent as Background} from './assets/image.svg';
 import './App.css';
 import {Container} from "react-bootstrap";
 import {
@@ -8,6 +7,7 @@ import {
   StyledDivWhite, StyledDivYellow
 } from "./atoms/Containers";
 import styled from "styled-components";
+import {Tagline} from "./molecules/Tagline";
 
 const StyledContainer = styled(Container)`
 scroll-snap-type: y mandatory;
@@ -19,7 +19,9 @@ scroll-snap-type: y mandatory;
 function App() {
   return (
       <StyledContainer className={'mx-0 px-0 my-0 py-0'} fluid>
-        <StyledDivBlue><TagLine/></StyledDivBlue>
+        <StyledDivBlue>
+          <Tagline />
+        </StyledDivBlue>
         <StyledDivWhite>b</StyledDivWhite>
         <StyledDivOrange>c</StyledDivOrange>
         <StyledDivYellow>d</StyledDivYellow>
