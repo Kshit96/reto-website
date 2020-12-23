@@ -23,9 +23,9 @@ AOS.init();
 function App () {
   return (
       <StyledContainer className={'mx-0 px-0 my-0 py-0'} fluid>
-        {/*<StyledDivBlue>*/}
-        {/*  <Tagline />*/}
-        {/*</StyledDivBlue>*/}
+        <StyledDivBlue>
+          <Tagline />
+        </StyledDivBlue>
         <StyledDivWhite><Features /></StyledDivWhite>
         <StyledDivOrange>c</StyledDivOrange>
         <StyledDivYellow>d</StyledDivYellow>
