@@ -107,6 +107,7 @@ dist
 # dependencies
 /node_modules
 package-lock.json
+yarn.lock
 build
 /.pnp
 .pnp.js
