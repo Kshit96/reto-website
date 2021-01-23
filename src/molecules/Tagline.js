@@ -5,7 +5,9 @@ import { StyledCenterRow } from '../atoms/RowsAndCols'
 export const Tagline = props => {
   return (
       <StyledCenterRow>
-        <CenterHeadingWhite text={'you\'re the game'} />
+        <CenterHeadingWhite text={'You\'re the game'} />
       </StyledCenterRow>
   )
 }
+
+export default Tagline

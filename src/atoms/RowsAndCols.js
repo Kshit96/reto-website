@@ -13,3 +13,12 @@ flex-direction: row;
 justify-content: center;
 align-items:center;
 `
+
+
+
+export const StyledCenterColVertical = styled(Col)`
+display: flex; 
+flex-direction: column;
+justify-content: center;
+align-items:center;
+`

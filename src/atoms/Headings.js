@@ -37,6 +37,15 @@ text-align: center;
 width: auto;
 `
 
+const StyledPBlueText = styled.p`
+font-family: Gilroy;
+font-weight: bold;
+font-size: 2.5rem;
+color: #1e3d59;
+text-align: center;
+width: auto;
+`
+
 export const CenterHeadingWhite = props => {
   return (
       <StyledPWhite>{props.text}</StyledPWhite>
@@ -60,3 +69,10 @@ export const CenterHeadingYellow = props => {
       <StyledPYellow>{props.text}</StyledPYellow>
   )
 }
+
+export const CenterTextBlue = props =>{
+  return(
+      <StyledPBlueText>{props.text}</StyledPBlueText>
+  )
+}
+
