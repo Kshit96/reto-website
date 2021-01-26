@@ -1,17 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Col, Container, Image, Row} from 'react-bootstrap'
-import { StyledDivWhite } from '../atoms/Containers'
+import {Col, Image, Row} from 'react-bootstrap'
 import {
   CenterHeadingBlue,
   CenterHeadingOrange,
-  CenterTextBlue
+  LeftTextBlue
 } from '../atoms/Headings'
 import {
   StyledCenterColHorizontal,
   StyledCenterColVertical
 } from '../atoms/RowsAndCols'
-
 
 const StyledRow = styled(Row)`
   scroll-snap-type: x mandatory;
@@ -28,31 +26,49 @@ const StyledImage = styled(Image)`
   padding: 5rem 5rem 5rem 5rem;
 `
 
-const featureContainer = (text, image) => {
+const StyledCol = styled(Col)`
+display: flex;
+flex-direction: row;
+
+`
+
+const featureContainer = (title, image, text) => {
   return (
       <Col xs={12}>
-          <Row>
-            <StyledCenterColHorizontal xs={{span:4, offset: 1}}>
-              <StyledImage src={image} fluid/>
-            </StyledCenterColHorizontal>
-            <StyledCenterColVertical xs={6}>
-              <CenterHeadingOrange text={text.substr(0, 1)}/>
-              <CenterHeadingBlue text={text.substr(1, text.length - 1)}/>
-              <CenterTextBlue text={'Tired of playing with the same group of friends or looking for new people to compete with? We dare you to CHALLENGE!'}/>
-            </StyledCenterColVertical>
-          </Row>
+        <Row>
+          <StyledCenterColHorizontal xs={{span: 4, offset: 2}}>
+            <StyledImage src={image} fluid/>
+          </StyledCenterColHorizontal>
+          <Col style={{display: 'flex', alignItems: 'center'}} xs={6}>
+            <Row>
+              <StyledCol xs={12}>
+                <CenterHeadingOrange text={title.substr(0, 1)}/>
+                <CenterHeadingBlue text={title.substr(1, text.length - 1)}/>
+              </StyledCol>
+              <StyledCol xs={8}>
+                <LeftTextBlue text={text}/>
+              </StyledCol>
+            </Row>
+          </Col>
+        </Row>
       </Col>
   )
 }
 
 const Features = (props) => (
     <StyledRow className="mx-0 px-0 my-0 py-0" fluid>
-      {featureContainer('challenge', '/images/Mockuppng.png')}
-      {featureContainer('personal profile')}
-      {featureContainer('scoring')}
-      {featureContainer('wall')}
-      {featureContainer('feed')}
-      {featureContainer('tournament')}
+      {featureContainer('challenge', '/images/Mockuppng.png',
+          'Tired of playing with the same group of friends or looking for new people to compete with? We dare you to CHALLENGE!')}
+      {featureContainer('personal profile', '/images/Mockuppng.png',
+          'We know its difficult to keep a track of your wonderful performances. Dont worry, we got you covered.')}
+      {featureContainer('scoring', '/images/Mockuppng.png',
+          'Forget the hastle of counting your score manually. Leave that to us and enjoy your game of cricket.')}
+      {featureContainer('wall', '/images/Mockuppng.png',
+          'An exlusive space for your cricket shaningans. Like, post or share in our private cricket space.')}
+      {featureContainer('feed', '/images/Mockuppng.png',
+          'Tired of using multiple apps to keep yourself updated? Use our news feed for all national and international cricket news.')}
+      {featureContainer('tournament', '/images/Mockuppng.png',
+          'We tell you about all the tournaments happening around you. What are you waiting for? participate and share your stories with us.')}
     </StyledRow>
 )
 

@@ -4,15 +4,17 @@ import { Container } from 'react-bootstrap'
 import {
   StyledDivBG,
   StyledDivBlue,
-  StyledDivOrange,
-  StyledDivWhite, StyledDivYellow
+  StyledDivOrange, StyledDivWhite,
+  StyledDivYellow
 } from './atoms/Containers'
 import styled from 'styled-components'
 import Tagline from './molecules/Tagline'
+import Story from './molecules/Story'
 import Features from './molecules/Features'
 import Introduction from './molecules/Introduction'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import {Footer} from "./molecules/Footer";
 
 const StyledContainer = styled(Container)`
   scroll-snap-type: y mandatory;
@@ -29,9 +31,9 @@ function App () {
         <StyledDivBlue>
           <Tagline />
         </StyledDivBlue>
-        <StyledDivWhite><Features /></StyledDivWhite>
-        <StyledDivOrange>c</StyledDivOrange>
-        <StyledDivYellow>d</StyledDivYellow>
+        <StyledDivYellow><Features /></StyledDivYellow>
+        <StyledDivOrange><Story /></StyledDivOrange>
+        <StyledDivWhite><Footer /></StyledDivWhite>
       </StyledContainer>
   )
 }

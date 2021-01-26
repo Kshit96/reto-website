@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import IntroBG from '../assets/IntroductionBackground.png'
 import blueBackground from "../assets/blueBackground.svg"
+import yellowBackground from "../assets/yellowBackground.svg"
+import orangeBackground from "../assets/orangeBackground.svg"
+import Sports from "../assets/sports.svg"
 
 export const StyledDivBlue = styled.div`
   height: 100vh;
@@ -17,18 +20,23 @@ export const StyledDivBlue = styled.div`
 export const StyledDivWhite = styled.div`
   height: 100vh;
   width:100vw;
-  background-color: #f5f0e1;
+  background:  url(${Sports});
+  background-position: top left; 
+  background-repeat: no-repeat;
+  background-size: 70vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 `
 
 export const StyledDivOrange = styled.div`
   height: 100vh;
   width:100vw;
-  background-color: #ff6e40;
+    background:  url(${orangeBackground});
+  background-size: cover;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
@@ -39,7 +47,8 @@ export const StyledDivOrange = styled.div`
 export const StyledDivYellow = styled.div`
   height: 100vh;
   width:100vw;
-  background-color: #ffc13b;
+    background:  url(${yellowBackground});
+  background-size: cover;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;

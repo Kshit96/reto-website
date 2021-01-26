@@ -14,7 +14,13 @@ justify-content: center;
 align-items:center;
 `
 
+export const WideRow = styled(Row)`
+width: 100%;
+`
 
+export const WideCol = styled(Col)`
+width: 100%;
+`
 
 export const StyledCenterColVertical = styled(Col)`
 display: flex; 
