@@ -19,11 +19,11 @@ export const StyledDivBlue = styled.div`
 
 export const StyledDivWhite = styled.div`
   height: 100vh;
-  width:100vw;
+  width: 100vw;
   background:  url(${Sports});
-  background-position: top left; 
+  background-position: -10px 0px; 
   background-repeat: no-repeat;
-  background-size: 70vh;
+  background-size: 71vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;

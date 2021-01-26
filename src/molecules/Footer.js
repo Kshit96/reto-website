@@ -113,13 +113,13 @@ export const Footer = () => {
         </StyledContainer>
         <StyledRow>
           <StyledCol xs={4}>
-            <StyledImage src={Instagram} fluid/>
+            <a href={'https://www.instagram.com/r3to.sports/'} target="_blank"><StyledImage src={Instagram} fluid/></a>
           </StyledCol>
           <StyledCol xs={4}>
-            <StyledImage src={Facebook} fluid/>
+            <a href={'https://www.facebook.com/R3TO-101096728529066'} target="_blank"><StyledImage src={Facebook} fluid/></a>
           </StyledCol>
           <StyledCol xs={4}>
-            <StyledImage src={Twitter} fluid/>
+            <a href={'https://twitter.com/R3TOsports'} target="_blank"><StyledImage src={Twitter} fluid/></a>
           </StyledCol>
         </StyledRow></>
   )
