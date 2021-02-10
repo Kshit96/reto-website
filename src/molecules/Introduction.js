@@ -1,8 +1,13 @@
 import React from 'react'
 import styled from "styled-components";
-import {Col, Container, Image} from "react-bootstrap";
-import {StyledCenterRow} from "../atoms/RowsAndCols";
+import {Col, Container, Image, Row} from "react-bootstrap";
 import logo from "../assets/r3to.png";
+
+export const StyledCenterRow = styled(Row)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 export const Introduction = props => {
   return (

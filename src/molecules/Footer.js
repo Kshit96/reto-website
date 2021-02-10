@@ -9,19 +9,23 @@ import {
   Image
 } from "react-bootstrap";
 import {
-  StyledCenterColHorizontal,
-  StyledCenterColVertical,
-  StyledCenterRow, WideCol, WideRow
+  WideCol, WideRow
 } from "../atoms/RowsAndCols";
 import styled from 'styled-components'
 import {
-  CenterHeadingBlue,
   CenterTitleBlue,
   LeftTextBlue
 } from "../atoms/Headings";
 import Facebook from "../assets/Facebook.svg";
 import Twitter from "../assets/Twitter.svg";
 import Instagram from "../assets/Instagram.svg";
+
+export const StyledCenterColVertical = styled(Col)`
+display: flex; 
+flex-direction: column;
+justify-content: center;
+align-items:center;
+`
 
 const StyledContainer = styled(Container)`
 font-family: gilroy;

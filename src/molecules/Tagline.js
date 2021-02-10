@@ -1,6 +1,13 @@
 import React from 'react'
 import { CenterHeadingWhite } from '../atoms/Headings'
-import { StyledCenterRow } from '../atoms/RowsAndCols'
+import styled from "styled-components";
+import {Row} from "react-bootstrap";
+
+export const StyledCenterRow = styled(Row)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 export const Tagline = props => {
   return (

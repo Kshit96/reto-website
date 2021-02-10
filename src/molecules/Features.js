@@ -6,10 +6,13 @@ import {
   CenterHeadingOrange,
   LeftTextBlue
 } from '../atoms/Headings'
-import {
-  StyledCenterColHorizontal,
-  StyledCenterColVertical
-} from '../atoms/RowsAndCols'
+
+export const StyledCenterColHorizontal = styled(Col)`
+display: flex; 
+flex-direction: row;
+justify-content: center;
+align-items:center;
+`
 
 const StyledRow = styled(Row)`
   scroll-snap-type: x mandatory;
@@ -62,11 +65,11 @@ const Features = (props) => (
       {featureContainer('personal profile', '/images/Mockuppng.png',
           'We know its difficult to keep a track of your wonderful performances. Dont worry, we got you covered.')}
       {featureContainer('scoring', '/images/Mockuppng.png',
-          'Forget the hastle of counting your score manually. Leave that to us and enjoy your game of cricket.')}
+          'Move away from counting your score in your mind or on boards. Maintain a Digital score and enjoy your game.')}
       {featureContainer('wall', '/images/Mockuppng.png',
-          'An exlusive space for your cricket shaningans. Like, post or share in our private cricket space.')}
+          'An exlusive space for your Sports shaningans. Like, post or share in our private space.')}
       {featureContainer('feed', '/images/Mockuppng.png',
-          'Tired of using multiple apps to keep yourself updated? Use our news feed for all national and international cricket news.')}
+          'Tired of using multiple apps to keep yourself updated? Use our news feed for all national and international Sports news.')}
       {featureContainer('tournament', '/images/Mockuppng.png',
           'We tell you about all the tournaments happening around you. What are you waiting for? participate and share your stories with us.')}
     </StyledRow>

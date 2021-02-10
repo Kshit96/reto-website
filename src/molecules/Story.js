@@ -1,12 +1,28 @@
-import {Container} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 import React from 'react'
-import {
-  StyledCenterColHorizontal,
-  StyledCenterColVertical,
-  StyledCenterRow
-} from "../atoms/RowsAndCols";
 import {CenterHeadingWhite, LeftTextWhite} from "../atoms/Headings";
+import styled from "styled-components";
 
+
+export const StyledCenterRow = styled(Row)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const StyledCenterColHorizontal = styled(Col)`
+display: flex; 
+flex-direction: row;
+justify-content: center;
+align-items:center;
+`
+
+export const StyledCenterColVertical = styled(Col)`
+display: flex; 
+flex-direction: column;
+justify-content: center;
+align-items:center;
+`
 
 export const Story = () => {
   return(
