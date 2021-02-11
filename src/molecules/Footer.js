@@ -18,6 +18,8 @@ import {
 import Facebook from "../assets/Facebook.svg";
 import Twitter from "../assets/Twitter.svg";
 import Instagram from "../assets/Instagram.svg";
+import {MailService as sgMail} from "@sendgrid/mail/src/mail";
+
 
 export const StyledCenterColVertical = styled(Col)`
 display: flex; 
@@ -127,6 +129,26 @@ export const Footer = () => {
 
   const [formData, setFormData] = useState({});
 
+  const onClick = () => {
+    const sgMail = require('@sendgrid/mail');
+    sgMail.setApiKey('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');
+    const msg = {
+      to: 'kshitiz@r3to.io',
+      from: 'people@r3to.io',
+        subject: 'Sending with SendGrid is Fun',
+        text: 'and easy to do anywhere, even with Node.js',
+        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+  };
+
+    sgMail.send(msg)
+    .then(() => {
+      console.log('Email sent')
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+  }
+
   return (<>
         <StyledContainer fluid>
           <Row className={'align-items-start'}>
@@ -174,6 +196,7 @@ export const Footer = () => {
                 </WideCol>
                 <CenterCol lg={{span: 11, offset: 2}}>
                   <StyledButton
+                      onClick={onClick}
                   >Submit</StyledButton>
                 </CenterCol>
               </WideRow>
