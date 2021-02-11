@@ -14,32 +14,6 @@ width: auto;
 }
 `;
 
-const StyledPBlue = styled.p`
-font-family: Gilroy;
-font-weight: bold;
-font-size: 3vw;
-color: #1E3D59;
-text-align: center;
-width: auto;
-
-@media (max-width: 992px){
-   font-size: 3vw;
-}
-`;
-
-const StyledPOrange = styled.p`
-font-family: Gilroy;
-font-weight: bold;
-font-size: 3vw;
-color: #ff6e40;
-text-align: center;
-width: auto;
-
-@media (max-width: 992px){
-   font-size: 3vw;
-}
-`;
-
 const StyledPYellow = styled.p`
 font-family: Gilroy;
 font-weight: bold;
@@ -85,21 +59,9 @@ export const CenterHeadingWhite = props => {
   )
 };
 
-export const CenterHeadingBlue = props => {
-  return (
-      <StyledPBlue>{props.text}</StyledPBlue>
-  )
-};
-
 export const CenterTitleBlue = props => {
   return (
       <StyledPBlueTitle>{props.text}</StyledPBlueTitle>
-  )
-};
-
-export const CenterHeadingOrange = props => {
-  return (
-      <StyledPOrange>{props.text}</StyledPOrange>
   )
 };
 

@@ -28,7 +28,7 @@ function App () {
         {/*  <Tagline />*/}
         {/*</StyledDivBlue>*/}
         {/*<StyledDivYellow><Features /></StyledDivYellow>*/}
-        <StyledDivOrange><Story /></StyledDivOrange>
+        {/*<StyledDivOrange><Story /></StyledDivOrange>*/}
         <StyledDivWhite><Footer /></StyledDivWhite>
       </StyledContainer>
   )

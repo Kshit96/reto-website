@@ -30,6 +30,21 @@ export const StyledDivWhite = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
+  @media(max-width: 992px){
+    background-position: -10px 13.5rem;
+    background-size: 50vh;
+  }
+  
+  @media(max-width: 762px){
+    background-position: -10px 16rem;
+    background-size: 50vh;
+  }
+  
+  @media (max-width: 576px){
+    background-size: 45vh;
+    background-position: -15px 19.5rem;
+  }
 `
 
 export const StyledDivOrange = styled.div`
