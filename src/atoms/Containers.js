@@ -35,7 +35,7 @@ export const StyledDivWhite = styled.div`
 export const StyledDivOrange = styled.div`
   height: 100vh;
   width:100vw;
-    background:  url(${orangeBackground});
+  background:  url(${orangeBackground});
   background-size: cover;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -47,7 +47,7 @@ export const StyledDivOrange = styled.div`
 export const StyledDivYellow = styled.div`
   height: 100vh;
   width:100vw;
-    background:  url(${yellowBackground});
+  background:  url(${yellowBackground});
   background-size: cover;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -61,6 +61,7 @@ export const StyledDivBG = styled.div`
   width:100vw;
   background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)), url(${IntroBG});
   background-size: cover;
+  background-position: center;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
