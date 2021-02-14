@@ -126,38 +126,17 @@ const featureContainer = (title, image, text) => {
 const Features = () => {
 
   const settings = {
+    centerMode: true,
     dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     dotsClass: "slick-dots show-dots",
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-        }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-
+    autoplay: true,
+    autoplaySpeed: 6000,
+    speed: 500,
+    pauseOnDotsHover: true,
+    pauseOnHover: false,
   };
 
   return (

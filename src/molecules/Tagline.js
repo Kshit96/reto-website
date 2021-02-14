@@ -61,14 +61,14 @@ export const Tagline = props => {
   return (
       <StyledContainer fluid>
         <StyledCenterRow>
-          <StyledCenterColVertical className={'mt-5'} lg={{span: 12}} xs={8}>
-            <StyledPWhite><b>VISION</b></StyledPWhite>
+          <StyledCenterColVertical lg={{span: 12}} xs={8}>
+            <StyledPWhite><b>OUR VISION</b></StyledPWhite>
           </StyledCenterColVertical>
-          <StyledCenterColVertical lg={12} xs={8}>
+          <StyledCenterColVertical className={'mb-5'} lg={12} xs={8}>
             <StyledPWhiteText>To create a space for Athletes and Organisations that enables Social, Professional & Sustainable growth across all sports</StyledPWhiteText>
           </StyledCenterColVertical>
-          <StyledCenterColVertical className={'mt-5'} lg={{span: 12}} xs={8}>
-            <StyledPWhite><b>MISSION</b></StyledPWhite>
+          <StyledCenterColVertical className={'mt-5 pt-5'} lg={{span: 12}} xs={8}>
+            <StyledPWhite><b>THE MISSION</b></StyledPWhite>
           </StyledCenterColVertical>
           <StyledCenterColVertical lg={{span: 12}} xs={8}>
             <StyledPWhiteText>To build a Tech-One platform across all sporting realms</StyledPWhiteText>
