@@ -9,10 +9,10 @@ export const StyledCenterRow = styled(Row)`
   align-items: center;
   justify-content: center;
   width: 100%;
-  MARGIN: 0rem;
+  margin: 0rem;
 `;
 
-export const StyledCenterColHorizontal = styled(Col)`
+const StyledCenterColHorizontal = styled(Col)`
 display: flex; 
 flex-direction: column;
 align-items: start;
@@ -23,7 +23,7 @@ align-items: start;
   }
 `;
 
-export const StyledCenterColVertical = styled(Col)`
+const StyledCenterColVertical = styled(Col)`
 display: flex; 
 flex-direction: column;
 justify-content: center;
@@ -62,7 +62,6 @@ width: auto;
 @media (max-width: 576px){
    font-size: 2rem;
 }
-
 `;
 
 const StyledContainer = styled(Container)`

@@ -19,6 +19,8 @@ import Facebook from "../assets/Facebook.svg";
 import Twitter from "../assets/Twitter.svg";
 import Instagram from "../assets/Instagram.svg";
 import emailjs from 'emailjs-com';
+import {toast, ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export const StyledCenterColVertical = styled(Col)`
@@ -125,11 +127,52 @@ const StyledButton=styled(Button)`
   background-color: #245874;
 `;
 
+const StyledDiv = styled.div`
+  
+ width: 100%;
+ height:100%; 
+
+.Toastify__toast.Toastify__toast--dark {
+ background-color: #245874 !important;
+}
+`;
+
+const toastP=styled.p`
+textAlign: center; 
+width: 100%; 
+padding: 0rem;
+fontFamily: Gilroy;
+`
+
 export const Footer = () => {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
+  const toastMessage = () => {
+    toast.info(<toastP>Thank you for your interest in R3TO! We have successfully noted your query.</toastP>, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+
+  const toastError = (message) => {
+    toast.error(<toastP>{message}</toastP>, {
+      position: "top-right",
+      autoClose: false,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
 
   const onClick = () => {
 
@@ -140,11 +183,21 @@ export const Footer = () => {
       message: message
     }
 
-    emailjs.init('user_sFZIEi9xMxXho4jybllSs')
-    emailjs.send("service_jdv3p5a","template_wxig08u", templateParams);
-  }
+    if(name.length===0 | message.length===0 | email.length===0){
+      toastError('Please fill in all fields.');
+      return;
+    }
 
-  return (<>
+    emailjs.init('user_sFZIEi9xMxXho4jybllSs')
+    emailjs.send("service_jdv3p5a","template_wxig08u", templateParams)
+    .then(function() {
+      toastMessage();
+    }, function() {
+      toastError('Uh Oh! There seems to be a problem at our end! Please reach out to us directly at people@r3to.io!')
+    });
+  };
+
+  return (<StyledDiv>
         <StyledContainer fluid>
           <Row className={'align-items-start'}>
             <Col lg={{span: 4, offset: 1}} xs={12}>
@@ -211,6 +264,7 @@ export const Footer = () => {
             <a href={'https://twitter.com/R3TOsports'}
                target="_blank" rel="noopener noreferrer"><StyledImage src={Twitter} fluid/></a>
           </StyledCol>
-        </StyledRow></>
+        </StyledRow>
+        <ToastContainer/></StyledDiv>
   )
 }

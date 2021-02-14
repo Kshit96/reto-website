@@ -95,6 +95,11 @@ const StyledImage = styled(Image)`
    height: 60%;
    margin-bottom: 8vw;
   }
+  
+    @media (max-width: 768px){
+   height: 60%;
+   margin-bottom: 8vw;
+  }
 `
 
 const featureContainer = (title, image, text) => {

@@ -27,11 +27,11 @@ function App () {
   return (
       <StyledContainer className={'mx-0 px-0 my-0 py-0'} fluid>
         <StyledDivBG><Introduction/></StyledDivBG>
-        <StyledDivBlue>
+        <StyledDivOrange>
           <Tagline />
-        </StyledDivBlue>
+        </StyledDivOrange>
         <StyledDivYellow><Features /></StyledDivYellow>
-        <StyledDivOrange><Story /></StyledDivOrange>
+        <StyledDivBlue><Story /></StyledDivBlue>
         <StyledDivWhite><Footer /></StyledDivWhite>
       </StyledContainer>
   )
