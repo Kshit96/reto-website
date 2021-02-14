@@ -21,7 +21,7 @@ export const StyledDivWhite = styled.div`
   height: 100vh;
   width: 100vw;
   background:  url(${Sports});
-  background-position: -10px 0px; 
+  background-position: -10px 0rem; 
   background-repeat: no-repeat;
   background-size: 71vh;
   scroll-snap-align: start;
@@ -32,12 +32,12 @@ export const StyledDivWhite = styled.div`
   flex-direction: column;
   
   @media(max-width: 992px){
-    background-position: -10px 13.5rem;
+    background-position: -10px 19.5rem;
     background-size: 50vh;
   }
   
   @media(max-width: 762px){
-    background-position: -10px 16rem;
+    background-position: -10px 30rem;
     background-size: 50vh;
   }
   

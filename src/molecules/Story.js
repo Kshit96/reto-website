@@ -9,6 +9,7 @@ export const StyledCenterRow = styled(Row)`
   align-items: center;
   justify-content: center;
   width: 100%;
+  MARGIN: 0rem;
 `;
 
 export const StyledCenterColHorizontal = styled(Col)`
@@ -40,6 +41,10 @@ width: auto;
    text-align: center;
    font-size: 2vw;
   }
+  
+  @media (max-width: 576px){
+   font-size: 0.7rem;
+}
 `;
 
 const StyledPWhite = styled.p`
@@ -53,6 +58,11 @@ width: auto;
 @media (max-width: 992px){
    font-size: 6vw;
 }
+
+@media (max-width: 576px){
+   font-size: 2rem;
+}
+
 `;
 
 const StyledContainer = styled(Container)`

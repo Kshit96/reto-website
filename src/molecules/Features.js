@@ -21,7 +21,7 @@ text-align: center;
 width: auto;
 
 @media (max-width: 992px){
-   font-size: 8vw;
+   font-size: 3rem;
 }
 `;
 
@@ -34,7 +34,7 @@ text-align: center;
 width: auto;
 
 @media (max-width: 992px){
-   font-size: 8vw;
+   font-size: 3rem;
 }
 `;
 
@@ -61,6 +61,7 @@ const StyledContainer = styled(Container)`
 const StyledRow = styled(Row)`
 display: flex !important;
 flex-direction: row;
+margin: 0rem;
 ;`;
 
 const CenterCol = styled(Col)`
@@ -81,6 +82,7 @@ width: auto;
 
   @media (max-width: 992px){
    text-align: center;
+   font-size: 1rem;
   }
 
 `;
@@ -90,7 +92,7 @@ const StyledImage = styled(Image)`
   self-align: center;
   
   @media (max-width: 992px){
-   width: 40%;
+   height: 60%;
    margin-bottom: 8vw;
   }
 `
@@ -158,7 +160,7 @@ const Features = () => {
         <Slider className={'slider-features mx-auto'} {...settings}>
           {featureContainer('challenge', challenge,
               'Tired of playing with the same group of friends or looking for new people to compete with? We dare you to CHALLENGE!')}
-          {featureContainer('personal profile', profile,
+          {featureContainer('profile', profile,
               'We know its difficult to keep a track of your wonderful performances. Dont worry, we got you covered.')}
           {featureContainer('scoring', scoreboard,
               'Move away from counting your score in your mind or on boards. Maintain a Digital score and enjoy your game.')}

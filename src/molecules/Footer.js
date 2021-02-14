@@ -18,7 +18,7 @@ import {
 import Facebook from "../assets/Facebook.svg";
 import Twitter from "../assets/Twitter.svg";
 import Instagram from "../assets/Instagram.svg";
-import {MailService as sgMail} from "@sendgrid/mail/src/mail";
+import emailjs from 'emailjs-com';
 
 
 export const StyledCenterColVertical = styled(Col)`
@@ -127,26 +127,21 @@ const StyledButton=styled(Button)`
 
 export const Footer = () => {
 
-  const [formData, setFormData] = useState({});
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const onClick = () => {
-    const sgMail = require('@sendgrid/mail');
-    sgMail.setApiKey('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');
-    const msg = {
-      to: 'kshitiz@r3to.io',
-      from: 'people@r3to.io',
-        subject: 'Sending with SendGrid is Fun',
-        text: 'and easy to do anywhere, even with Node.js',
-        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-  };
 
-    sgMail.send(msg)
-    .then(() => {
-      console.log('Email sent')
-    })
-    .catch((error) => {
-      console.error(error)
-    })
+    const templateParams = {
+      from_email: email,
+      to_email: 'people@r3to.io',
+      name: name,
+      message: message
+    }
+
+    emailjs.init('user_sFZIEi9xMxXho4jybllSs')
+    emailjs.send("service_jdv3p5a","template_wxig08u", templateParams);
   }
 
   return (<>
@@ -164,7 +159,7 @@ export const Footer = () => {
                     <InputGroup className="mb-3">
                       <Form.Control
                           style={{borderColor: "#245874", color: "#245874"}}
-                          value={formData.name}
+                          onChange={(e)=>setName(e.target.value)}
                           name={'name'}
                           type="text"
                           placeholder="Name*"
@@ -174,7 +169,7 @@ export const Footer = () => {
                     <InputGroup className="mb-3">
                       <Form.Control
                           style={{borderColor: "#245874", color: "#245874"}}
-                          value={formData.email}
+                          onChange={(e)=>setEmail(e.target.value)}
                           name={'email'}
                           type="email"
                           placeholder="Email*"
@@ -184,7 +179,7 @@ export const Footer = () => {
                     <InputGroup className="mb-3">
                       <Form.Control
                           style={{borderColor: "#245874", color: "#245874"}}
-                          value={formData.query}
+                          onChange={(e)=>setMessage(e.target.value)}
                           className={'text-area'}
                           name={'query'}
                           placeholder="Write to us, we'd love to hear from you..."

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import {Col, Container, Image, Row} from "react-bootstrap";
-import logo from "../assets/r3to.png";
+import logo from "../assets/logo.svg";
 import {
   CenterHeadingYellow
 } from "../atoms/Headings";
@@ -16,13 +16,17 @@ export const StyledCenterRow = styled(Row)`
 const StyledPYellow = styled.p`
 font-family: Gilroy;
 font-weight: bold;
-font-size: 3vw;
+font-size: 3rem;
 color: #ffc13b;
 text-align: center;
 width: auto;
 
 @media (max-width: 992px){
-   font-size: 3vw;
+   font-size: 5vw;
+}
+
+@media (max-width: 576px){
+   font-size: 1.5rem;
 }
 
 @keyframes enter-screen-bottom {
@@ -34,25 +38,38 @@ width: auto;
   }
 }
 
-  animation: enter-screen-bottom 2s 4s backwards;
+  animation: enter-screen-bottom 2s 2.7s backwards;
   z-index:0;
 
 `;
 
 const StyledImage = styled(Image)`  
   @keyframes enter-screen-top {
-  0% {
-    margin-bottom: -20vw;
+    0% {
+      margin-bottom: -25vw;
+    }
+    100% {
+      margin-bottom: 0;
+    }
   }
-  100% {
-    margin-bottom: 0;
-  }
-}
 
   animation: enter-screen-top 2s 3s backwards;
   z-index: 1;
 
   padding: 1rem 1rem 1rem 1rem;
+  
+  @media (max-width: 576px){
+     @keyframes enter-screen-top-mobile {
+    0% {
+      margin-bottom: -32vw;
+    }
+    100% {
+      margin-bottom: 0;
+    }
+  }
+
+  animation: enter-screen-top-mobile 2s 3s backwards;
+}
 
 `
 
@@ -64,7 +81,7 @@ export const Introduction = props => {
   return (
       <Container>
         <StyledCenterRow>
-          <StyledCol xs={3}>
+          <StyledCol xs={8} lg={6}>
             <StyledImage src={logo} fluid/>
           </StyledCol>
           <StyledCol xs={12}>
