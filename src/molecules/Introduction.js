@@ -8,6 +8,7 @@ import {
 
 export const StyledCenterRow = styled(Row)`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -16,7 +17,7 @@ export const StyledCenterRow = styled(Row)`
 const StyledPYellow = styled.p`
 font-family: Gilroy;
 font-weight: bold;
-font-size: 3rem;
+font-size: 2rem;
 color: #ffc13b;
 text-align: center;
 width: auto;
@@ -81,10 +82,10 @@ export const Introduction = props => {
   return (
       <Container>
         <StyledCenterRow>
-          <StyledCol xs={8} lg={6}>
+          <StyledCol xs={8} lg={4}>
             <StyledImage src={logo} fluid/>
           </StyledCol>
-          <StyledCol xs={12}>
+          <StyledCol xs={8}>
             <StyledPYellow >You're the game</StyledPYellow>
           </StyledCol>
         </StyledCenterRow>

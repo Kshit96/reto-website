@@ -1,9 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {Col, Container, Image, Row} from 'react-bootstrap'
-import {
-  LeftTextBlue
-} from '../atoms/Headings'
 import Slider from "react-slick";
 import challenge from "../assets/noun_challenge_1560035.svg"
 import feed from "../assets/noun_Feed_3141723.svg"
@@ -15,7 +12,7 @@ import tournament from "../assets/noun_tournament_2415955.svg"
 const StyledPBlue = styled.p`
 font-family: Gilroy;
 font-weight: bold;
-font-size: 5vw;
+font-size: 2rem;
 color: #1E3D59;
 text-align: center;
 width: auto;
@@ -28,7 +25,7 @@ width: auto;
 const StyledPOrange = styled.p`
 font-family: Gilroy;
 font-weight: bold;
-font-size: 5vw;
+font-size: 2rem;
 color: #ff6e40;
 text-align: center;
 width: auto;
@@ -36,6 +33,19 @@ width: auto;
 @media (max-width: 992px){
    font-size: 3rem;
 }
+`;
+
+const StyledPBlueText = styled.p`
+font-family: Gilroy;
+font-weight: normal;
+font-size: 1rem;
+color: #245874;
+width: auto;
+
+  @media (max-width: 992px){
+   text-align: center;
+   font-size: 1rem;
+  }
 `;
 
 const StyledCol = styled(Col)`
@@ -50,8 +60,7 @@ const StyledCol = styled(Col)`
 `;
 
 const StyledContainer = styled(Container)`
-  max-width:95vw;
-  
+  max-width:80vw;
   .slick-track{
   display:flex;
   align-items: center;
@@ -73,19 +82,7 @@ const CenterCol = styled(Col)`
   }
 `;
 
-const StyledPBlueText = styled.p`
-font-family: Gilroy;
-font-weight: normal;
-font-size: 2vw;
-color: #245874;
-width: auto;
 
-  @media (max-width: 992px){
-   text-align: center;
-   font-size: 1rem;
-  }
-
-`;
 
 const StyledImage = styled(Image)`
   width:80%;
@@ -105,10 +102,10 @@ const StyledImage = styled(Image)`
 const featureContainer = (title, image, text) => {
   return (
       <StyledRow>
-        <CenterCol xs={{span: 12}} lg={{span: 4, offset: 1}}>
+        <CenterCol xs={{span: 12}} lg={{span: 3, offset:2}}>
           <StyledImage src={image}/>
         </CenterCol>
-        <CenterCol xs={{span: 12}} lg={{span: 6, offset: 1}}>
+        <CenterCol xs={{span: 12}} lg={{span: 5, offset: 1}}>
           <Row>
             <StyledCol xs={12}>
               <StyledPOrange>{title.substr(0, 1)}</StyledPOrange>

@@ -56,6 +56,7 @@ background-color: #245874;
 height: 15%;
 width: 100%;
 display: flex;
+margin: 0px;
 justify-content: center;
 align-items: center;
 
