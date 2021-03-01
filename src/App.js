@@ -86,8 +86,8 @@ function App () {
           <Tagline />
         </StyledDivOrange>
         <StyledDivYellow><Features /></StyledDivYellow>
-        <StyledDiv><ComingSoon /></StyledDiv>
         <StyledDivBlue><Story /></StyledDivBlue>
+        <StyledDiv><ComingSoon /></StyledDiv>
         <StyledDivWhite><Footer /></StyledDivWhite>
       </StyledContainer>
   )
