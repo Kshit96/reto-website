@@ -4,7 +4,7 @@ import {Col, Container, Image, Row} from 'react-bootstrap'
 import Slider from "react-slick";
 import challenge from "../assets/noun_challenge_1560035.svg"
 import feed from "../assets/noun_Feed_3141723.svg"
-import post from "../assets/noun_post_1033492.svg"
+import post from "../assets/noun_news_2206757.svg"
 import profile from "../assets/noun_profile_3671626.svg"
 import scoreboard from "../assets/noun_scoreboard_1975588.svg"
 import tournament from "../assets/noun_tournament_2415955.svg"
@@ -71,6 +71,7 @@ const StyledRow = styled(Row)`
 display: flex !important;
 flex-direction: row;
 margin: 0rem;
+padding-bottom: 4rem;
 ;`;
 
 const CenterCol = styled(Col)`
@@ -81,8 +82,6 @@ const CenterCol = styled(Col)`
    justify-content: center;
   }
 `;
-
-
 
 const StyledImage = styled(Image)`
   width:80%;

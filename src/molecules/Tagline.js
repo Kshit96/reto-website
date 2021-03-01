@@ -15,7 +15,7 @@ export const StyledCenterRow = styled(Row)`
  background-size: 10rem 10rem;
  background-position: left;
  padding-left: 150px;
-margin-left: -150px;
+ margin-left: -150px;
 }
 
 div.mission{
@@ -90,13 +90,13 @@ export const Tagline = props => {
           <StyledCenterCol lg={{span: 8}} xs={8}>
             <StyledPWhite><b>OUR VISION</b></StyledPWhite>
           </StyledCenterCol>
-          <StyledCenterCol className={'mb-5 vision'} lg={6} xs={8}>
+          <StyledCenterCol className={'mb-5 vision'} lg={{span:6, offset:4}} xs={8}>
             <StyledPWhiteText ><i>"To create a space for Athletes and Organisations that enables Social, Professional & Sustainable growth across all sports"</i></StyledPWhiteText>
           </StyledCenterCol>
           <StyledCenterCol className={'mt-5 pt-5'} lg={{span: 8}} xs={8}>
             <StyledPWhite><b>THE MISSION</b></StyledPWhite>
           </StyledCenterCol>
-          <StyledCenterCol className={'mission'} lg={{span: 6}} xs={8}>
+          <StyledCenterCol className={'mission'} lg={{span:6, offset:4}} xs={8}>
             <StyledPWhiteText><i>"To build a Tech-One platform across all sporting realms"</i></StyledPWhiteText>
           </StyledCenterCol>
         </StyledCenterRow>

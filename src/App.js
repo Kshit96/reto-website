@@ -14,6 +14,7 @@ import Sports from "./assets/sports.svg";
 import orangeBackground from "./assets/orangeBackground.svg";
 import yellowBackground from "./assets/yellowBackground.svg";
 import IntroBG from "./assets/IntroductionBackground.png";
+import ComingSoon from "./molecules/ComingSoon";
 
 const StyledContainer = styled(Container)`
   scroll-snap-type: y mandatory;
@@ -70,7 +71,7 @@ export const StyledDivYellow = styled(StyledDiv)`
 `;
 
 export const StyledDivBG = styled(StyledDiv)`
-  background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)), url(${IntroBG});
+  background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0)), url(${IntroBG});
   background-size: cover;
   background-position: center;
 `;
@@ -85,6 +86,7 @@ function App () {
           <Tagline />
         </StyledDivOrange>
         <StyledDivYellow><Features /></StyledDivYellow>
+        <StyledDiv><ComingSoon /></StyledDiv>
         <StyledDivBlue><Story /></StyledDivBlue>
         <StyledDivWhite><Footer /></StyledDivWhite>
       </StyledContainer>
