@@ -13,7 +13,7 @@ import blueBackground from "./assets/blueBackground.svg";
 import Sports from "./assets/sports.svg";
 import orangeBackground from "./assets/orangeBackground.svg";
 import yellowBackground from "./assets/yellowBackground.svg";
-import IntroBG from "./assets/IntroductionBackground.png";
+import IntroBG from "./assets/IntroductionBackground.svg";
 import ComingSoon from "./molecules/ComingSoon";
 
 const StyledContainer = styled(Container)`
@@ -71,7 +71,7 @@ export const StyledDivYellow = styled(StyledDiv)`
 `;
 
 export const StyledDivBG = styled(StyledDiv)`
-  background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0)), url(${IntroBG});
+  background: url(${IntroBG});
   background-size: cover;
   background-position: center;
 `;
