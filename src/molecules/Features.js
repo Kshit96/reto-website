@@ -60,17 +60,20 @@ const StyledCol = styled(Col)`
 `;
 
 const StyledContainer = styled(Container)`
-  max-width:80vw;
+  width:80vw;
   .slick-track{
   display:flex;
   align-items: center;
   }
+  
+  @media (max-width: 992px){
+   width:95vw;
+}
 `;
 
 const StyledRow = styled(Row)`
 display: flex !important;
 flex-direction: row;
-margin: 0rem;
 padding-bottom: 4rem;
 ;`;
 
@@ -91,11 +94,6 @@ const StyledImage = styled(Image)`
    height: 60%;
    margin-bottom: 8vw;
   }
-  
-    @media (max-width: 768px){
-   height: 60%;
-   margin-bottom: 8vw;
-  }
 `
 
 const featureContainer = (title, image, text) => {
@@ -110,7 +108,7 @@ const featureContainer = (title, image, text) => {
               <StyledPOrange>{title.substr(0, 1)}</StyledPOrange>
               <StyledPBlue>{title.substr(1, text.length - 1)}</StyledPBlue>
             </StyledCol>
-            <StyledCol xs={{span:8, offset:2}} lg={{span:10, offset:0}}>
+            <StyledCol xs={{span:12}} lg={{span:10, offset:0}}>
               <StyledPBlueText>{text}</StyledPBlueText>
             </StyledCol>
           </Row>
@@ -133,6 +131,18 @@ const Features = () => {
     speed: 500,
     pauseOnDotsHover: true,
     pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          centerMode: true,
+          centerPadding: '1rem'
+        },
+      },
+    ],
   };
 
   return (
