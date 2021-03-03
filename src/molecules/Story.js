@@ -39,12 +39,8 @@ width: auto;
 
   @media (max-width: 992px){
    text-align: center;
-   font-size: 2vw;
+   font-size: 0.9rem;
   }
-  
-  @media (max-width: 576px){
-   font-size: 0.7rem;
-}
 `;
 
 const StyledPWhite = styled.p`
@@ -66,6 +62,11 @@ width: auto;
 
 const StyledContainer = styled(Container)`
  width: 80%;
+ 
+ @media (max-width: 992px){
+   width: 95%;
+}
+ 
 `;
 
 const StyledP = styled.p`
@@ -86,7 +87,7 @@ export const Story = () => {
             <StyledPWhite>R3TO</StyledPWhite>
             <StyledPWhiteText><StyledP>the story</StyledP></StyledPWhiteText>
           </StyledCenterColHorizontal>
-          <StyledCenterColVertical lg={{span:6, offset:1}} xs={8}>
+          <StyledCenterColVertical lg={{span:6, offset:1}} xs={12}>
             <StyledPWhiteText>Visibility and recognition play a pivotal role
             in the life of any athlete. The need for a digital platform to foster a
             sports community has been often overlooked, not only by an individual but
