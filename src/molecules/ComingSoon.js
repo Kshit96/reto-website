@@ -7,6 +7,9 @@ import PlayStore from "../assets/google-play-badge.png"
 
 const StyledContainer = styled(Container)`
  width: 80%;
+   @media (max-width: 992px){
+   width: 95%;
+  }
 `;
 
 const StyledPBlueTitle = styled.p`
@@ -17,11 +20,12 @@ text-align: center;
 width: auto;
 
 @media (max-width: 992px){
-   font-size: 5vw;
+   padding-top: 2rem;
+   font-size: 2rem;
 }
 
 @media (max-width: 576px){
-   font-size: 2rem;
+   font-size: 1rem;
 }
 `;
 
@@ -46,12 +50,12 @@ const StyledImage = styled(Image)`
   padding: 1rem;
   
   @media (max-width: 992px){
-   height: 60%;
+   height: 80%;
    margin-bottom: 8vw;
   }
   
     @media (max-width: 768px){
-   height: 60%;
+   height: 80%;
    margin-bottom: 8vw;
   }
 `
@@ -60,15 +64,15 @@ export const ComingSoon = () => {
   return(
       <StyledContainer fluid>
         <Row>
-          <Col lg={7}>
+          <Col lg={7} xs={12}>
             <Image src={Screens} fluid/>
           </Col>
-          <StyledCenterCol lg={5}>
+          <StyledCenterCol lg={5} xs={12}>
             <StyledCenterRowVertical>
-              <Col>
+              <Col xs={12}>
                 <StyledPBlueTitle>Coming Soon...</StyledPBlueTitle>
               </Col>
-              <Col>
+              <Col xs={12}>
                 <StyledImage style={{width: '47%'}} src={AppStore} fluid/>
                 <StyledImage src={PlayStore} fluid/>
               </Col>
