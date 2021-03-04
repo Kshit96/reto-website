@@ -12,6 +12,7 @@ import Sports from "./assets/sports.svg";
 import orangeBackground from "./assets/orangeBackground.svg";
 import yellowBackground from "./assets/yellowBackground.svg";
 import IntroBG from "./assets/IntroductionBackground.svg";
+import IntroBGImage from "./assets/IntroductionBackground.png";
 import ComingSoon from "./molecules/ComingSoon";
 
 const StyledContainer = styled(Container)`
@@ -70,7 +71,7 @@ export const StyledDivYellow = styled(StyledDiv)`
 `;
 
 export const StyledDivBG = styled(StyledDiv)`
-  background: url(${IntroBG});
+  background: url(${IntroBG}), url(${IntroBGImage});
   background-size: cover;
   background-position: center;
 `;
