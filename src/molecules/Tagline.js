@@ -87,16 +87,16 @@ export const Tagline = props => {
   return (
       <StyledContainer fluid>
         <StyledCenterRow>
-          <StyledCenterCol lg={{span: 8}} xs={8}>
+          <StyledCenterCol lg={{span: 8}} xs={12}>
             <StyledPWhite><b>OUR VISION</b></StyledPWhite>
           </StyledCenterCol>
-          <StyledCenterCol className={'mb-5 vision'} lg={{span:6, offset:4}} xs={8}>
+          <StyledCenterCol className={'mb-5 vision'} lg={{span:6, offset:4}} xs={12}>
             <StyledPWhiteText ><i>"To create a space for Athletes and Organisations that enables Social, Professional & Sustainable growth across all sports"</i></StyledPWhiteText>
           </StyledCenterCol>
-          <StyledCenterCol className={'mt-5 pt-5'} lg={{span: 8}} xs={8}>
+          <StyledCenterCol className={'mt-5 pt-5'} lg={{span: 8}} xs={12}>
             <StyledPWhite><b>THE MISSION</b></StyledPWhite>
           </StyledCenterCol>
-          <StyledCenterCol className={'mission'} lg={{span:6, offset:4}} xs={8}>
+          <StyledCenterCol className={'mission'} lg={{span:6, offset:4}} xs={12}>
             <StyledPWhiteText><i>"To build a Tech-One platform across all sporting realms"</i></StyledPWhiteText>
           </StyledCenterCol>
         </StyledCenterRow>
