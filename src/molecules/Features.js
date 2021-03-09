@@ -12,7 +12,7 @@ import tournament from "../assets/noun_tournament_2415955.svg"
 const StyledPBlue = styled.p`
 font-family: Gilroy;
 font-weight: bold;
-font-size: 2rem;
+font-size: 3rem;
 color: #1E3D59;
 text-align: center;
 width: auto;
@@ -25,7 +25,7 @@ width: auto;
 const StyledPOrange = styled.p`
 font-family: Gilroy;
 font-weight: bold;
-font-size: 2rem;
+font-size: 3rem;
 color: #ff6e40;
 text-align: center;
 width: auto;
@@ -38,7 +38,7 @@ width: auto;
 const StyledPBlueText = styled.p`
 font-family: Gilroy;
 font-weight: normal;
-font-size: 1rem;
+font-size: 1.5rem;
 color: #245874;
 width: auto;
 
@@ -87,7 +87,7 @@ const CenterCol = styled(Col)`
 `;
 
 const StyledImage = styled(Image)`
-  width:80%;
+  width:90%;
   self-align: center;
   
   @media (max-width: 992px){
@@ -108,7 +108,7 @@ const featureContainer = (title, image, text) => {
               <StyledPOrange>{title.substr(0, 1)}</StyledPOrange>
               <StyledPBlue>{title.substr(1, text.length - 1)}</StyledPBlue>
             </StyledCol>
-            <StyledCol xs={{span:12}} lg={{span:10, offset:0}}>
+            <StyledCol xs={{span:12}} lg={{span:12, offset:0}}>
               <StyledPBlueText>{text}</StyledPBlueText>
             </StyledCol>
           </Row>
