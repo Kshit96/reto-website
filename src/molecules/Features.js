@@ -155,7 +155,7 @@ const Features = () => {
           {featureContainer('scoring', scoreboard,
               'Move away from counting your score in your mind or on boards. Maintain a digital score and enjoy your game.')}
           {featureContainer('wall', post,
-              'An exclusive space for your sports shenanigans. Like, post or share in your private space.')}
+              'An exclusive space for your sports shenanigans. Like, post or share in your personalised space.')}
           {featureContainer('feed', feed,
               'Tired of using multiple apps to keep yourself updated? Use our news feed for all national and international sports news.')}
           {featureContainer('tournament', tournament,
