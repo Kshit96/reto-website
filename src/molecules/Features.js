@@ -151,15 +151,15 @@ const Features = () => {
           {featureContainer('challenge', challenge,
               'Tired of playing with the same group of friends or looking for new people to compete with? We dare you to CHALLENGE!')}
           {featureContainer('profile', profile,
-              'We know its difficult to keep a track of your wonderful performances. Dont worry, we got you covered.')}
+              'We know it\'s difficult to keep  track of your wonderful performances. Don\'t worry, we got you covered.')}
           {featureContainer('scoring', scoreboard,
-              'Move away from counting your score in your mind or on boards. Maintain a Digital score and enjoy your game.')}
+              'Move away from counting your score in your mind or on boards. Maintain a digital score and enjoy your game.')}
           {featureContainer('wall', post,
-              'An exclusive space for your Sports shenanigans. Like, post or share in your private space.')}
+              'An exclusive space for your sports shenanigans. Like, post or share in your private space.')}
           {featureContainer('feed', feed,
-              'Tired of using multiple apps to keep yourself updated? Use our news feed for all national and international Sports news.')}
+              'Tired of using multiple apps to keep yourself updated? Use our news feed for all national and international sports news.')}
           {featureContainer('tournament', tournament,
-              'We tell you about all the tournaments happening around you. What are you waiting for? participate and share your stories with us.')}
+              'We tell you about all the tournaments happening around you. What are you waiting for? Participate and share your stories with us.')}
         </Slider>
       </StyledContainer>
   )
